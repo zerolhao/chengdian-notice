@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="css/index.css">
   <script>
   var pageWidth = window.innerWidth
-  document.write('<style>html{font-size: ' + pageWidth / 10 + 'px;}</style>')
+  var pageHeight = window.innerHeight
+  document.write(`<style>html{font-size: ${pageWidth / 10}px;} body{height: ${pageHeight}px}</style>`)
   </script>
 </head>
 
