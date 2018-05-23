@@ -1,5 +1,7 @@
-body{font-size: .42rem; background:  url(../images/bg-min.png); background-size: cover; background-repeat: no-repeat; height: 100vh; padding: .46rem .32rem; }
-.container{border: .1rem solid #143141; border-top-left-radius: .2rem; border-top-right-radius: .2rem; display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+body{font-size: .42rem; background:  url(../images/bg-min.png); background-size: cover; background-repeat: no-repeat; height: 100vh; xpadding: .46rem .32rem; }
+.container{border: .1rem solid #143141; border-top-left-radius: .2rem; border-top-right-radius: .2rem; display: flex; flex-direction: column; justify-content: space-between; 
+  height: calc(100vh - 0.92rem); 
+  margin:  .46rem .32rem;;}
 .boldText{font-weight: bold; }
 .centerText{text-align: center; }
 
