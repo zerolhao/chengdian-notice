@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>录取通知书填写</title>
+  <link rel="stylesheet" href="css/init.css">
+  <link rel="stylesheet" href="//res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  <script>
+  var pageWidth = window.innerWidth
+  document.write('<style>html{font-size: ' + pageWidth / 10 + 'px;}</style>')
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <img src="images/title.png" alt="录取通知书" class="logo">
+    </header>
+    <main>
+      <form action="" method="post">
+        <section>
+          <p>
+            <input size=6 type="text" placeholder="请输入姓名" name="username">
+            <span class="boldText">同学 ：</span>
+          </p>
+        </section>
+        <section>
+          <p class="centerText">经综合评定，您已被</p>
+          <div class="select-container">
+            <div class="weui-cells__title select-btn centerText" name="schoolname">请选择学校名称</div>
+            <p>录取。</p>
+            <div class="select-mask">
+              <div class="weui-cells select-ul">
+              </div>
+            </div>
+          </div>
+          <p class="centerText">请于2018年9月1日准时到校报到。</p>
+        </section>
+        <section>
+          <p>HEY,树先生<span>颁</span></p>
+          <button type="submit">一键生成</button>
+        </section>
+      </form>
+    </main>
+  </div>
+  <script src="vendors/jquery.min.js"></script>
+  <script src="js/init-select.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

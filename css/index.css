@@ -1,0 +1,39 @@
+body{font-size: .42rem; background:  url(../images/bg-min.png); background-size: cover; background-repeat: no-repeat; height: 100vh; padding: .46rem .32rem; }
+.container{border: .1rem solid #143141; border-top-left-radius: .2rem; border-top-right-radius: .2rem; display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+.boldText{font-weight: bold; }
+.centerText{text-align: center; }
+
+header,main,footer{width: 7rem; margin: 0 auto; }
+header{padding: .7rem 0; }
+header > .logo{display: block; margin: 0 auto; width: 7rem; }
+
+main{padding: .8rem 0; color: #143141; height: calc(100% - 3.6rem); }
+main input,main .select-btn{/*this*/ border: none; background-color: transparent; font-size: .56rem; font-weight: bold; outline: none; color: rgba(20,49,65,.6); }
+main input::-webkit-input-placeholder {  /* WebKit browsers */ font-size: .56rem; }
+main input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ font-size: .56rem; }
+main input::-moz-placeholder { /* Mozilla Firefox 19+ */ font-size: .56rem; }
+main input :-ms-input-placeholder { /* Internet Explorer 10+ */ font-size: .56rem; }
+main form{display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+
+main form section:first-child{flex-grow: 1; }
+main  section:first-child p > span{font-size: .5rem; }
+
+main form section:nth-child(2){flex-grow: 4; }
+main .select-container{xposition: relative; }
+main .select-btn{position: relative; }
+main .select-btn + p{text-align: right; font-size: .4rem; color: #143141; font-weight: normal; }
+main .select-mask{width:100vw; height: 100vh; position: absolute; top: 0; left: 0; display: none; }
+main .select-mask.active{background: rgba(0,0,0,.7); display: block; }
+main .select-ul{display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 70vw;height: 70vh; overflow: auto; border-radius: .3rem; }
+main .select-ul.active{display: block; } 
+main .select-li{font-size: .4rem; flex-direction: column; }
+main .select-li .weui-cell__ft,main .select-li .weui-cell__bd > p{text-align: center; }
+main > form > section:nth-child(2) > p{
+  line-height: 1.2rem;
+  font-family: fantasy;
+}
+
+main form section:last-child{flex-grow: 2; display: flex; flex-direction: column; justify-content: space-between; }
+main section:nth-child(3) p{text-align: right; font-weight: bold; }
+main section:nth-child(3) p >span{font-size: .54rem; padding-left: .1rem; }
+main section:last-child > button{color: #D3C19F; background-color: #143141; margin: 0 auto; display: block; font-size: .5rem; padding: .2rem .8rem; xmargin-top: 1.5rem; outline: none; border: none; border-radius: .5rem; }
