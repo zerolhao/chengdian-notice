@@ -18,7 +18,7 @@ main form{display: flex; flex-direction: column; justify-content: space-between;
 main form section:first-child{flex-grow: 1; }
 main  section:first-child p > span{font-size: .5rem; }
 
-main form section:nth-child(2){flex-grow: 4; }
+main form section:nth-child(2){flex-grow: 3; }
 main .select-container{xposition: relative; }
 main .select-btn{position: relative; }
 main .select-btn + p{text-align: right; font-size: .4rem; color: #143141; font-weight: normal; }
