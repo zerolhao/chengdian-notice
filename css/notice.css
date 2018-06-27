@@ -1,16 +1,26 @@
 *{margin:0;padding:0;box-sizing: border-box;}
 *{color: inherit;}
-body{
+.container-bg{
   font-size: .44rem;
   background:  url(../images/bg-min.png);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  padding: .46rem .32rem;  
   color: #143141;
-  font
+  position: absolute;
+  top: 0;
+  left: 100%;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: left .7s;
 }
-.container{
+.container-bg.active {
+  left: 0;
+  padding: .46rem .32rem;
+}
+.container-bg > .container{
   border: .1rem solid #143141;
   border-top-left-radius: .2rem;
   border-top-right-radius: .2rem;
@@ -39,83 +49,82 @@ header > .logo{
   margin: 0 auto;
   width: 7rem;
 }
-main{
+.container-bg main{
   flex-grow: 6;
   display: flex;
   padding: .3rem 0 1.6rem;
 }
-main > .text{
+.container-bg main > .text{
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-main > .text > p{
+.container-bg main > .text > p{
   position: relative;
 }
-main > .text > p:first-child{
+.container-bg main > .text > p:first-child{
   padding-bottom: .2rem;
 }
-main > .text > p:first-child > span:last-child{
+.container-bg main > .text > p:first-child > span:last-child{
   font-size: .46rem;
   padding-left: .2rem;
 }
-main > .text > p > span[name=username],
-main > .text > p > span[name=schoolname]{
+.container-bg main > .text > p > span[name=username],
+.container-bg main > .text > p > span[name=schoolname]{
   font-size: .56rem;
   color: rgba(20,49,65,.6);
 }
-main > .text > p:nth-child(3) > span:last-child{
+.container-bg main > .text > p:nth-child(3) > span:last-child{
   position: absolute;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 100%;
 }
-main > .text > p:nth-child(4){
+.container-bg main > .text > p:nth-child(4){
   font-family: fantasy;
+  margin-top: .6rem;
 }
-main > .text > p:last-child{
+.container-bg main > .text > p:last-child{
   font-weight: bold;
   text-align: right;
   padding-top: .3rem;
 }
-main > .text > p:last-child > span{
+.container-bg main > .text > p:last-child > span{
   font-size: .54rem;
   padding-left: .1rem;
 }
 
 
-footer{
+.container-bg footer{
   flex-grow: 2;
   position: relative;
   display: flex;
   align-items: center;
   padding-top: .4rem;
 }
-footer > .smallTitle{
+.container-bg footer > .smallTitle{
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80vw;
+  width: 8rem;
+  margin-left: -.5rem;
   border-top: .03rem solid #143141;
 }
-footer > .smallTitle > img{
+.container-bg footer > .smallTitle > img{
   width: 3rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  height: auto;
+  display: block;
+  margin: auto;
+  margin-top: -.33rem;
 }
-footer > .content{
+.container-bg footer > .content{
   display: flex;
 }
-footer > .content > img{
+.container-bg footer > .content > img{
   flex-grow: 1;
   width: 2.2rem;
   height: 2.2rem;
 }
-footer > .content > .guide{
+.container-bg footer > .content > .guide{
   flex-grow: 2;
   font-size: .3rem;
   margin-left: .4rem;
@@ -123,7 +132,7 @@ footer > .content > .guide{
   justify-content: space-between;
   flex-direction: column;
 }
-footer > .content > .guide > p > .icon-aleft{
+.container-bg footer > .content > .guide > p > .icon-aleft{
   background: url(../images/icon-aleft.png) no-repeat;
   background-size: .66rem .435rem;
   width: .66rem;
@@ -132,6 +141,39 @@ footer > .content > .guide > p > .icon-aleft{
   vertical-align: bottom;
   margin-right: .2rem;
 }
-footer > .content > .guide > p:last-child{
+.container-bg footer > .content > .guide > p:last-child{
   font-size: .4rem;
 }
+.noticeImg-mask{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  background: rgba(0,0,0,.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 1s;
+  color: #fff;
+}
+.noticeImg-mask.active{
+  bottom: 0%;
+  top: 0%;
+}
+.noticeImg-mask > img{
+  width: 70%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.noticeImg-mask.active > img{
+  opacity: 1;
+}
+.noticeImg-mask.active > p{
+  font-size: .46rem;
+  margin-bottom: .2rem;
+}
+

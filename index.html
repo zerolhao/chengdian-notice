@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/init.css">
   <link rel="stylesheet" href="//res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/notice.css">
   <script>
   var pageWidth = window.innerWidth
   var pageHeight = window.innerHeight
@@ -16,38 +17,93 @@
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <img src="images/title.png" alt="录取通知书" class="logo">
-    </header>
-    <main>
-      <form action="" method="post">
-        <section>
-          <p>
-            <input size=6 type="text" placeholder="请输入姓名" name="username">
-            <span class="boldText">同学 ：</span>
-          </p>
-        </section>
-        <section>
-          <p class="centerText">经综合评定，您已被</p>
-          <div class="select-container">
-            <div class="weui-cells__title select-btn centerText" name="schoolname">请选择学校名称</div>
-            <p>录取。</p>
-            <div class="select-mask">
-              <div class="weui-cells select-ul">
+  <div class="index">
+    <div class="container">
+      <header>
+        <img src="images/title.png" alt="录取通知书" class="logo">
+      </header>
+      <main>
+        <form action="" method="post">
+          <section>
+            <p class="username">
+              <input size=6 type="text" placeholder="请输入姓名" name="username">
+              <span class="boldText">同学 ：</span>
+            </p>
+          </section>
+          <section>
+            <p class="centerText">经综合评定，您已被</p>
+            <div class="select-container">
+              <div class="weui-cells__title select-btn centerText" name="schoolname">请选择学校名称</div>
+              <p>录取。</p>
+              <div class="select-mask">
+                <div class="weui-cells select-ul">
+                </div>
               </div>
             </div>
-          </div>
-          <p class="centerText">请于2018年9月1日准时到校报到。</p>
-        </section>
-        <section>
-          <p>HEY,树先生<span>颁</span></p>
-          <button type="submit">一键生成</button>
-        </section>
-      </form>
-    </main>
+            <p class="centerText">请于2018年9月1日准时到校报到。</p>
+          </section>
+          <section>
+            <p>HEY,树先生<span>颁</span></p>
+            <button type="submit">一键生成</button>
+          </section>
+        </form>
+      </main>
+    </div>
   </div>
+  <div id="canvasToImg" class="container-bg">
+    <div class="container">
+      <header>
+        <img src="images/title.png" alt="录取通知书" class="logo">
+      </header>
+      <main>
+        <div class="text">
+          <p>
+            <span id="username" class="boldText"></span>
+            <span class="boldText">同学 ：</span>
+          </p>
+          <p class="centerText">经综合评定，您已被</p>
+          <p class="centerText">
+            <span id="schoolname" class="boldText"></span>
+            <span>录取。</span>
+          </p>
+          <p class="centerText">请于2018年9月1日准时到校报到。</p>
+          <p>HEY,树先生<span>颁</span></p>
+        </div>
+      </main>
+      <footer>
+        <div class="smallTitle">
+          <img src="images/small-title.png" alt="入学报到">
+        </div>
+        <div class="content">
+          <img src="images/qr.png" alt="二维码" class="qr">
+          <div class="guide">
+            <p>不知道五道口理工学院是什么？</p>
+            <p><span class="icon-aleft"></span>问他，</p>
+            <p>回复<span class="boldText">“五道口理工学院”</span>即可</p>
+            <p class="boldText">请添加客服完成报道</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <div id='noticeImg' class="noticeImg-mask">
+    <p>长按图片保存</p>
+  </div>
+
+  <div id="dialog" style="display: none;">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+      <div class="weui-dialog__hd"><strong class="weui-dialog__title">提示</strong></div>
+      <div class="weui-dialog__bd">请输入姓名和选择学校！</div>
+      <div class="weui-dialog__ft">
+        <a id='closeDialog' href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">确定</a>
+      </div>
+    </div>
+  </div>
+
   <script src="vendors/jquery.min.js"></script>
+  <script src="vendors/html2canvas.min.js"></script>
   <script src="js/init-select.js"></script>
   <script src="js/index.js"></script>
 </body>
